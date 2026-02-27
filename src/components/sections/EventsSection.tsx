@@ -111,12 +111,13 @@ const EventsSection = () => {
                   </div>
 
                   {/* Enhanced Action Button */}
-                  <div className="mt-8">
+                  <div className="mt-8 relative z-10">
                     <motion.button
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
                       onClick={() => handleGetDirections(event.mapUrl)}
-                      className="w-full py-3 px-6 bg-gradient-to-r from-yellow-400 via-yellow-500 to-pink-500 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center gap-2 group/btn"
+                      className="w-full py-3 px-6 bg-gradient-to-r from-yellow-400 via-yellow-500 to-pink-500 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center gap-2 group/btn relative z-20 cursor-pointer"
+                      style={{ pointerEvents: "auto" }}
                     >
                       <MapPin
                         size={18}
@@ -129,8 +130,8 @@ const EventsSection = () => {
                 </div>
 
                 {/* Enhanced Hover Effect with Shimmer */}
-                <div className="absolute inset-0 bg-gradient-to-br from-yellow-400/10 via-transparent to-pink-400/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
-                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -skew-x-12 transform -translate-x-full group-hover:translate-x-full transition-transform duration-1000 pointer-events-none"></div>
+                <div className="absolute inset-0 bg-gradient-to-br from-yellow-400/10 via-transparent to-pink-400/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none z-0"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -skew-x-12 transform -translate-x-full group-hover:translate-x-full transition-transform duration-1000 pointer-events-none z-0"></div>
               </div>
             </motion.div>
           ))}
