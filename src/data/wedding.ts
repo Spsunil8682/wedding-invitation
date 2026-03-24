@@ -91,6 +91,16 @@ export const weddingEvents: WeddingEvent[] = [
     mapUrl: "https://maps.app.goo.gl/zwv4x9xtnc2k38JV6",
   },
   {
+    id: "reception",
+    name: "Reception",
+    date: "23 April 2026",
+    time: "9:00 PM",
+    location: "Bride House",
+    description: "Celebrate with us as we begin our new journey together",
+    icon: "🥂",
+    mapUrl: "https://maps.app.goo.gl/S8CGiT3CkbfpfKxx9?g_st=ic",
+  },
+  {
     id: "phera",
     name: "Phera",
     date: "23 April 2026",
