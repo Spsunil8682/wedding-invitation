@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Heart, ChevronDown } from "lucide-react";
+import Image from "next/image";
 import { calculateTimeLeft } from "@/lib/utils";
 import { weddingDate, coupleNames } from "@/data/wedding";
 import Button from "@/components/ui/Button";
@@ -12,6 +13,7 @@ const HeroSection = () => {
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setMounted(true);
   }, []);
 
@@ -38,14 +40,20 @@ const HeroSection = () => {
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
-        <div
-          className="w-full h-full bg-cover bg-center bg-no-repeat"
+        <Image
+          src="/images/IMG_4188.jpg"
+          alt="Wedding background"
+          fill
+          className="object-cover"
           style={{
-            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('/images/IMG_4188.jpg')`,
+            objectPosition: "center 30%",
           }}
+          priority
+          quality={90}
         />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/40 to-black/40 z-10" />
         {/* Fallback gradient background */}
-        <div className="absolute inset-0 bg-black opacity-30" />
+        <div className="absolute inset-0 bg-black opacity-30 z-10" />
       </div>
 
       {/* Decorative Elements */}
