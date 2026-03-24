@@ -42,7 +42,7 @@ const Footer = () => {
               <MapPin className="mx-auto mb-3 text-pink-400" size={24} />
               <h3 className="font-semibold text-lg mb-2">Venue</h3>
               <p className="text-gray-300">
-                Boliya Bujurg, Sunel, Jhalawat (Raj.)
+                Boliya Bujurg, Sunel, Jhalawar (Raj.)
               </p>
             </div>
 
